@@ -25,7 +25,9 @@ const NavBar = () => {
       <DropdownMenu>
         <DropdownMenuTrigger className="outline-none">
           <Avatar className="capitalize">
-            <AvatarFallback>{user?.name[0]}</AvatarFallback>
+            <AvatarFallback>
+              {user && user.name ? user.name[0] : ""}
+            </AvatarFallback>
           </Avatar>
         </DropdownMenuTrigger>
         <DropdownMenuContent className="mr-4">
